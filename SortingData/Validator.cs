@@ -12,6 +12,9 @@ namespace SortingData
     /// </summary>
     public static class Validator
     {
+        /// <summary>
+        /// Проверка валидности объекта данных
+        /// </summary>
         public static bool IsValid(ExtracteData dataObject)
         {
             if (string.IsNullOrEmpty(dataObject.Title) || string.IsNullOrEmpty(dataObject.Connect))
@@ -37,6 +40,9 @@ namespace SortingData
             return false;
         }
 
+        /// <summary>
+        /// Проверка валидности пути к файлу
+        /// </summary>
         private static bool IsValidFilePath(string path)
         {
             string pattern = @"^(?:[a-zA-Z]:|\\\\[a-zA-Z0-9_.$-]+\\[a-zA-Z0-9_.$-]+)\\(?:[a-zA-Z0-9(){}\[\]!@#%&+=._-]+\\)*[a-zA-Z0-9(){}\[\]!@#%&+=._-]*$";

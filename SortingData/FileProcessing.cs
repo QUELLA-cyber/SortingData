@@ -15,9 +15,6 @@ namespace SortingData
         /// <summary>
         /// Сохраняет корректные данные в файлы.
         /// </summary>
-        /// <param name="validObjects">Список корректных объектов данных.</param>
-        /// <param name="numberOfParts">Количество частей для разбивки данных.</param>
-        /// <param name="outputDirectory">Директория для сохранения файлов.</param>
         public static void SaveValidData(List<ExtracteData> validObjects, int numberOfParts, string outputDirectory)
         {
             int totalValidObjects = validObjects.Count;

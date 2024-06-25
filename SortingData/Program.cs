@@ -31,6 +31,9 @@ namespace SortingData
             }
         }
 
+        /// <summary>
+        /// Получение пути к входному файлу
+        /// </summary>
         private static string GetInputFilePath(string[] args)
         {
             if (args.Length < 1)
@@ -41,11 +44,17 @@ namespace SortingData
             return args[0];
         }
 
+        /// <summary>
+        /// Чтение входного файла
+        /// </summary>
         private static string ReadInputFile(string path)
         {
             return File.ReadAllText(path, Encoding.UTF8);
         }
 
+        /// <summary>
+        /// Парсинг входных данных
+        /// </summary>
         private static List<ExtracteData> ParseInputTextData(string text)
         {
             var lines = text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
@@ -107,6 +116,9 @@ namespace SortingData
             return records;
         }
 
+        /// <summary>
+        /// Сохранение данных
+        /// </summary>
         private static void SaveData(List<ExtracteData> records)
         {
             int numberOfParts = 5; // Можно изменить, если нужно
@@ -150,6 +162,9 @@ namespace SortingData
             }
         }
 
+        /// <summary>
+        /// Очистка выходных файлов
+        /// </summary>
         private static void CleanupOutputFiles(int numberOfParts, string outputDirectory)
         {
             for (int i = 1; i <= numberOfParts; i++)
@@ -167,6 +182,9 @@ namespace SortingData
             }
         }
 
+        /// <summary>
+        /// Сохранение невалидных данных
+        /// </summary>
         private static void SaveInvalidData(List<ExtracteData> invalidObjects, string outputDirectory)
         {
             string badDataPath = Path.Combine(outputDirectory, "bad_data.txt");
@@ -194,6 +212,9 @@ namespace SortingData
             }
         }
 
+        /// <summary>
+        /// Обработка ошибок
+        /// </summary>
         private static void HandleError(Exception ex)
         {
             Console.WriteLine($"Произошла ошибка: {ex.Message}");
