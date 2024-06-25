@@ -55,11 +55,11 @@ namespace SortingData
         /// <summary>
         /// Парсинг входных данных
         /// </summary>
-        private static List<ExtracteData> ParseInputTextData(string text)
+        private static List<ExtractedData> ParseInputTextData(string text)
         {
             var lines = text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-            var records = new List<ExtracteData>();
-            ExtracteData currentObject = null;
+            var records = new List<ExtractedData>();
+            ExtractedData currentObject = null;
 
             foreach (var line in lines)
             {
@@ -77,7 +77,7 @@ namespace SortingData
                     {
                         records.Add(currentObject);
                     }
-                    currentObject = new ExtracteData
+                    currentObject = new ExtractedData
                     {
                         Title = line.Trim('[', ']')
                     };
@@ -119,13 +119,13 @@ namespace SortingData
         /// <summary>
         /// Сохранение данных
         /// </summary>
-        private static void SaveData(List<ExtracteData> records)
+        private static void SaveData(List<ExtractedData> records)
         {
             int numberOfParts = 5; // Можно изменить, если нужно
             string outputDirectory = Directory.GetCurrentDirectory();
 
-            var validObjects = new List<ExtracteData>();
-            var invalidObjects = new List<ExtracteData>();
+            var validObjects = new List<ExtractedData>();
+            var invalidObjects = new List<ExtractedData>();
 
             foreach (var record in records)
             {
@@ -185,7 +185,7 @@ namespace SortingData
         /// <summary>
         /// Сохранение невалидных данных
         /// </summary>
-        private static void SaveInvalidData(List<ExtracteData> invalidObjects, string outputDirectory)
+        private static void SaveInvalidData(List<ExtractedData> invalidObjects, string outputDirectory)
         {
             string badDataPath = Path.Combine(outputDirectory, "bad_data.txt");
             Console.WriteLine($"Сохранение некорректных данных в {badDataPath}");

@@ -15,7 +15,7 @@ namespace SortingData
         /// <summary>
         /// Проверка валидности объекта данных
         /// </summary>
-        public static bool IsValid(ExtracteData dataObject)
+        public static bool IsValid(ExtractedData dataObject)
         {
             if (string.IsNullOrEmpty(dataObject.Title) || string.IsNullOrEmpty(dataObject.Connect))
             {

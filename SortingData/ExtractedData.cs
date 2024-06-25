@@ -9,7 +9,7 @@ namespace SortingData
     /// <summary>
     /// Объекты данных
     /// </summary>
-    public class ExtracteData
+    public class ExtractedData
     {
         /// <summary>
         /// Заголовок объекта данных.

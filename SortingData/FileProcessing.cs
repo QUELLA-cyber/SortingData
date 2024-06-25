@@ -15,17 +15,17 @@ namespace SortingData
         /// <summary>
         /// Сохраняет корректные данные в файлы.
         /// </summary>
-        public static void SaveValidData(List<ExtracteData> validObjects, int numberOfParts, string outputDirectory)
+        public static void SaveValidData(List<ExtractedData> validObjects, int numberOfParts, string outputDirectory)
         {
             int totalValidObjects = validObjects.Count;
             int objectsPerFile = totalValidObjects / numberOfParts;
             int remainingObjects = totalValidObjects % numberOfParts;
 
-            List<List<ExtracteData>> fileData = new List<List<ExtracteData>>();
+            List<List<ExtractedData>> fileData = new List<List<ExtractedData>>();
 
             for (int i = 0; i < numberOfParts; i++)
             {
-                fileData.Add(new List<ExtracteData>());
+                fileData.Add(new List<ExtractedData>());
             }
 
             for (int i = 0; i < totalValidObjects; i++)
