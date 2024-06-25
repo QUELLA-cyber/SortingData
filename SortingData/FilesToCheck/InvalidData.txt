@@ -1,0 +1,5 @@
+[Неправильные1]
+Connect=File="invalid_path";
+
+[Неправильные2]
+Connect=Srvr="invalid_host";

@@ -52,8 +52,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="FilesToCheck\" />
+    <Content Include="FilesToCheck\count6.txt" />
+    <Content Include="FilesToCheck\InvalidData.txt" />
+    <Content Include="FilesToCheck\Null.txt" />
+    <Content Include="FilesToCheck\testdata.txt" />
+    <Content Include="FilesToCheck\ValidData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,14 @@
+[Правильные1]
+Connect=File="\\server\path\to\db";
+ID=12345678-1234-1234-1234-1234567890ab
+External=1
+
+[Правильные2]
+Connect=Srvr="host123:1234";Ref="database1";
+ID=abcdefab-cdef-abcd-efab-cdefabcdefab
+External=0
+
+[Правильные3]
+Connect=File="c:\valid\path\to\db";
+ID=abcdef12-3456-7890-abcd-ef1234567890
+External=1
